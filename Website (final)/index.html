@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type="text/css">
+        <script src="script.js" defer></script>
+        <title>FrequenzmesserIK</title>
+    </head>
+    <body onload="showDate(); changeBackground();">
+        <header>
+            <nav class="navbar"> 
+                <a href="index.html"><img
+                  class="logo"          
+                    src="InnkaufhausLogo.jpg" 
+                    alt="Home">
+                </a>
+                <div class="navLogo"></div>
+                <a href="#" class="toggleButton">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </a>
+                <div class="navLinks">
+                    <ul>
+                        <li><a href="datenanalyse.html">Datenanalyse</a></li>
+                        <li><a href="einstellungen.html">Einstellungen</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="title">FrequenzmesserIK</div>
+        <div id="currentDate"></div>
+        <div class="overviewSection">
+                <table id="overviewTable">
+                    <tr class="numberrow">
+                        <th class="number">24</th>
+                        <th class="number">24</th>
+                        <th class="number" id="vergleichVortag">kein Input</th>
+                    </tr>
+                    <tr class="descriptionrow">
+                        <td class="description">Kunden gesamt</td>
+                        <td class="description">Kunden aktuell</td>
+                        <td class="description">Vergleich Vorwoche</td>
+                    </tr>
+                </table>
+        </div>
+    </body>
+</html>

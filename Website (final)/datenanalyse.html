@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type="text/css">
+        <title>Datenanalyse</title>
+    </head>
+    <body onload="showDate();" onload="showData();">
+        <header>
+                <a href="index.html"><nav class="navbar"><img 
+                  class="logo"          
+                    src="InnkaufhausLogo.jpg" 
+                    alt="Home">
+                </a>
+                <div class="navLogo"></div>
+                <a href="#" class="toggleButton">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </a>
+                <div class="navLinks">
+                    <ul>
+                        <li><a href="datenanalyse.html" id="boldDatenanalyse">Datenanalyse</a></li>
+                        <li><a href="einstellungen.html">Einstellungen</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div id="statistics">
+          <button type="submit" id="statisticsButton" onclick="showData();">Zeige Daten im Intervall</button>
+        <table id="dataTable">
+          <tr>
+            <td class="nameData">von</td>
+            <td class="choose">
+                <form>
+                  <span class="dropdownSpanDatum">
+                    <label for="day"></label>
+                    <select name="day" id="daySD" class="day"></select>
+                    <label for="month"></label>
+                    <select name="month" id="monthSD" class="month"></select>
+                    <label for="year"></label>
+                    <select name="year" id="yearSD" class="year"></select>
+                  </span>
+                </form>
+              </td>
+              <td class="chooseTime">
+              <input type="time" class="inputUhrzeit" id="timeSD"> Uhr
+            </td>
+          </tr>
+          <tr>
+            <td class="nameData">bis</td>
+            <td class="choose">
+              <form>
+                <span class="dropdownSpanDatum">
+                  <label for="day"></label>
+                  <select name="day" id="dayED" class="day"></select>
+                  <label for="month"></label>
+                  <select name="month" id="monthED" class="month"></select>
+                  <label for="year"></label>
+                  <select name="year" id="yearED" class="year"></select>
+                </span>
+              </form>
+            </td>
+            <td class="chooseTime">
+              <input type="time" class="inputUhrzeit" id="timeED"> Uhr
+            </td>
+          </tr>
+        </table>
+      </div>
+        <div class="diagramm">
+            <div id="diagramm1"></div>
+        </div>
+        
+    <script src="script.js" defer></script>
+    </body>
+</html>

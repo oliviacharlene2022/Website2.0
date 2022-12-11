@@ -1,0 +1,584 @@
+  * {
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    font-weight: lighter;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    left: 0;
+  }
+
+  .navbar {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     background-color: #B4B4B4;
+     color: black;
+}
+
+.logo {
+    margin: 0.5rem;
+    height: 2rem;
+}
+
+.navLinks ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navLinks li {
+    list-style: none;
+}
+
+.navLinks li a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 1rem;
+}
+
+.navLinks li a:hover {
+    color: #ffffff;
+}
+
+.navLinks li a:focus {
+    background-color: #2997FF
+}
+
+#boldDatenanalyse {
+    font-weight: bold;
+}
+
+#boldEinstellungen {
+    font-weight: bold;
+}
+
+.toggleButton {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+}
+
+.toggleButton .bar {
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+    .toggleButton {
+        display: flex;
+    }
+
+    .navLinks {
+        display: none;
+        width: 100%;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navLinks ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navLinks ul li {
+        text-align: center;
+    }
+
+    .navLinks ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navLinks.active {
+        display: flex;
+    }
+}
+
+.title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 6vmax;
+    margin-top: 5vh;
+    color: #535353;
+}
+
+.date {
+    text-align: center;
+    font-size: 3vmin;
+    color: #535353;
+}
+
+#currentDate {
+    text-align: center;
+    font-size: 2.7vmax;
+    padding-top: .6vmax;
+    color: #535353;
+}
+
+#overviewTable {
+    margin: auto;
+    margin-top: 3.7vmax;
+    border-radius: 8vmin / 7vmin;
+    width: 65vmax;
+    max-width: 100vw;
+    height: 15vmin;
+    border-spacing: 3.5vmin;
+    background-color:  #B4B4B4;
+    padding: 1vh;
+    overflow: hidden;
+    table-layout: fixed;
+}
+
+.description, .number {
+    text-align: center;
+    border-radius: 7vmin / 7vmin;
+    width: 50pt;
+    word-wrap: normal;
+}
+
+.number {
+    height: 17vmax;
+    background-color: black;
+    color: white;
+    font-size: 8vmax;
+    font-weight: bold;
+}
+
+.description {
+    height: 6vmax;
+    font-size: 4vmin;
+    color: #323232;
+}
+
+.topTitle {
+    margin-top: 5vh;
+}
+
+#statistics {
+    font-size: 3.2vmin;
+    text-align: center;
+    margin-top: 4vh;
+}
+#statisticsButton {
+    color: white;
+    background-color: #2997FF;
+    margin-top: 0.75vh;
+    margin-bottom: 1.5vh;
+    border: none;
+    font-size: 3.4vmin;
+    padding: 1.2vmin;
+    border-radius: 2.5vmin;
+    margin-left: 1.5vw;
+    margin-right: 1.5vw;
+    width: 65vmax;
+    max-width: 95vw;
+}
+#statisticsButton:hover {
+    background-color: #46a6ff;
+}
+#statisticsButton:active {
+    background-color: #046bcb;
+}
+form {
+    display: inline;
+}
+
+#dataTable {
+    width: auto;
+    margin: auto;
+    padding: auto;
+    align-items: center;
+    text-align: center;
+    table-layout: center;
+    column-gap: none;
+    border-spacing: 1vmin;
+}
+
+.nameData {
+    font-size: 3.2vmin;
+    height: auto;
+    text-align: center;
+    padding: auto;
+    margin-left: 0.5vmin;
+}
+.choose {
+    margin: auto;
+    width: max-content;
+    height: auto;
+    max-width: 95vw;
+    text-align: center;
+    font-size: 3.2vmin;
+    display: flexbox;
+    justify-content: space-between;
+    margin: 0.5vmin;
+}
+.chooseTime {
+    text-align: center;
+    font-size: 3.2vmin;
+    float: right;
+}
+
+ .day, .month, .year {
+    font-size: 3.2vmin;
+    border-radius: 1.5vmin;
+    margin-left: 0.5vmin;
+    margin-right: 0.5vmin;
+    height: auto;
+    padding: auto;
+}
+
+.dropdownSpanDatum {
+    height:auto;
+}
+
+.inputUhrzeit {
+    font-size: 3.2vmin;
+    border-radius: 1.5vmin;
+    margin-right: 0.5vmin;
+    height: auto;
+    padding: auto;
+    margin: auto;
+}
+
+.diagramm {
+    align-items: center;
+    text-align: center;
+    padding-top: 3vh;
+}
+
+#diagramm1 {
+    border: #2997FF solid;
+    width: 65vmax;
+    max-width: 95vw;
+    margin: auto;
+    height: 50vh;
+}
+
+.camera {
+    align-items: center;
+    text-align: center;
+}
+
+#livefeed {
+    border: #2997FF solid;
+    width: 65vmax;
+    max-width: 95vw;
+    height: 37vmax;
+    max-height: 85vh;
+    margin: auto;
+    margin-top: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #daedff;
+}
+#hideOrShowDiv {
+    display: none;
+}
+#startFeedButton {
+    border: none;
+    background-color: transparent;
+    padding: none;
+    margin-top: none;
+    width: 60vmax;
+    max-width: 90vw;
+    height: 32vmax;
+    max-height: 80vh;
+}
+#ausrichten {
+    display: inline-block;
+    font-size: 3vmin;
+    margin-top: 2.5vh;
+    width: 65vmax;
+    max-width: 95vw;
+}
+#startFeedButton, #endFeed {
+    display: inline-block;
+    font-size: 3vmin;
+    margin-top: 2.5vh;
+}
+#obenButton {
+    border: 2pt black solid;
+    border-right-width: 1pt;
+    padding: 0.4vmin;
+    background-color: transparent;
+    border-radius: 1.3vmin 0 0 1.3vmin;
+    font-size: 2.7vmin;
+}
+#untenButton {
+    border: 2pt black solid;
+    border-left-width: 1pt;
+    padding: 0.4vmin;
+    background-color: transparent;
+    border-radius: 0 1.3vmin 1.3vmin 0;
+    font-size: 2.7vmin;
+}
+#untenButton:hover, #obenButton:hover, #endFeedButton:hover {
+    border: 2pt #2997FF solid;
+    background-color: #2997FF;
+    font-size: 2.7vmin;
+    color: white;
+}
+#untenButton:hover {
+    border-left-width: 1pt;
+}
+#obenButton:hover {
+    border-right-width: 1pt;
+}
+#untenButton:active, #obenButton:active, #endFeedButton:active {
+    border: 2pt #2997FF solid;
+    padding: 0.4vmin;
+    background-color: #2997FF;
+    font-size: 2.7vmin;
+    color:black ;
+}
+#untenButton:active {
+    border-left-width: 1pt;
+}
+#obenButton:active {
+    border-right-width: 1pt;
+}
+#endFeed {
+    width: 65vmax;
+    max-width: 95vw;
+}
+#endFeedButton {
+    border: 2pt black solid;
+    padding: 0.4vmin;
+    background-color: transparent;
+    border-radius: 1.3vmin;
+    font-size: 2.7vmin;
+}
+.timetable {
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    margin-top: 5vh;
+    display: grid;
+}
+#clock {
+    background-color: #B4B4B4;
+    border-radius: 50%;
+    width: 11vmin;
+    height: 11vmin;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    vertical-align: middle;
+    z-index: 2;
+}
+#clock img {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 7vmin;
+    height: 7vmin;
+}
+#timetableBox {
+    margin-right: auto;
+    margin-left: auto;
+    border: black solid;
+    width: 65vmax;
+    max-width: 90vw;
+    border-radius: 10vmin;
+    border-width: 1pt;
+    margin-top: -6vmin;
+}
+#timetable {
+    margin: auto;
+    margin-top: 5vh;
+    align-items: center;
+    text-align: center;
+    border-spacing: 2.5vh;
+    width: 65vmax;
+    max-width: 90vw;
+    font-size: 3vmin;
+    margin-bottom: 2vh;
+}
+#timetable th {
+    font-weight: bold;
+    padding-bottom: 1.5vh;
+}
+#timetable td {
+    font-weight: lighter;
+    color: #535353;
+}
+.deactivate, .update {
+    margin: auto;
+    width: 65vmax;
+    max-width: 90vw;
+    background-color: #B4B4B4;
+    border-radius: 5.5vmin;
+    border-width: 1pt;
+    margin-top: 4vh;
+    font-size: 3vmin;
+    text-align: center;
+}
+.weekday {
+    margin: auto;
+    font-size: 3vmin;
+    max-width: 85vw;
+    width: 55vmax;
+    border-radius: 1.5vmin;
+    margin-top: 2vh;
+    margin-bottom: 0.75vh;
+    padding: 0.7vmin;
+}
+.deactivateButton {
+    align-items: center;
+    text-align: center;
+}
+.weekdayButton{
+    color: white;
+    background-color: #2997FF;
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+    border: none;
+    font-size: 3vmin;
+    padding: 1.2vmin;
+    border-radius: 2.5vmin;
+}
+.fontSpan {
+    font-weight: bold;
+}
+.weekdayButton:hover {
+    background-color: #46a6ff;
+}
+.weekdayButton:active {
+    background-color: #046bcb;
+}
+#updateTable {
+    text-align: left;
+    margin: auto;
+    border-spacing: none;
+    max-width: 85vw;
+    width: 55vmax;
+    overflow: hidden;
+}
+#updateTable th {
+    width: auto;
+    margin: auto;
+    margin-left: 2vmin;
+    font-size: 4vmin;
+    font-weight: lighter;
+    text-align: left;
+}
+#updateTable td {
+    width: auto;
+    margin: auto;
+    font-size: 11vmin;
+    color: white;
+    font-weight: light;
+    text-align: right;
+}
+#updateTable tr {
+    width: auto;
+}
+
+.update {
+    margin-bottom: 5vh;
+}
+
+.updateTime {
+    border: none;
+    color: #2a2c2d;
+    font-size: 6vmin;
+    width: auto;
+    max-width: 40vmax;
+    font-weight: bold;
+    background-color: #B4B4B4;
+    display: end;
+    margin: 1vh;
+    border-radius: 2vh;
+}
+  
+/* Wrapper around the hour, minute, second, and am/pm fields as well as 
+the up and down buttons and the 'X' button */
+input[type=time]::-webkit-datetime-edit-fields-wrapper {
+    margin: auto;
+    display: flex;
+}
+  
+/* The space between the fields - between hour and minute, the minute and 
+second, second and am/pm */
+input[type=time]::-webkit-datetime-edit-text {
+    margin: auto;
+    display: left;
+}
+  
+/* The naming convention for the hour, minute, second, and am/pm field is
+`-webkit-datetime-edit-{field}-field` */
+  
+/* Hour */
+.updateTime::-webkit-datetime-edit-hour-field  {
+    margin: auto;
+    background-color: black;
+    color: white;
+    text-align: center;
+    display: left; 
+    border-radius: 2vh;
+    padding: 1.7vh;
+}
+  
+  /* Minute */
+.updateTime::-webkit-datetime-edit-minute-field {
+    margin: auto;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 2vh;
+    padding: 1.7vh;
+}
+  
+  /* AM/PM */
+.updateTime::-webkit-datetime-edit-ampm-field {
+    margin: auto;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 2vh;
+    padding: 1.7vh;
+}
+.updateTime::-moz-datetime-edit-minute-field{
+    margin: auto;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 2vh;
+    padding: 1.7vh;
+}
+  
+.updateTime::-webkit-calendar-picker-indicator {
+    filter: invert(41%) sepia(99%) saturate(839%) hue-rotate(186deg) brightness(100%) contrast(101%);
+}
+
+.info {
+    width: max-content;
+    font-size: 10pt;
+    font-weight: lighter;
+    color: white;
+    text-align: right;
+    align-items: right;
+    display: block;
+    clear: right;
+    float: right;
+    height: min-content;
+}
+.infoDiv {
+    height: min-content;
+}
+#updateTable tr:last-child {
+    height: min-content;
+}
